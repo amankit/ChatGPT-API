@@ -32,8 +32,6 @@ class Chatgpt(APIView):
         params = json.loads(request.body)
         user_input = params['question']
         response = generate_response(user_input)
-        # response = json.loads(response)
-        # return Response(['SCHEDULED GOOGLE CALENDER EVENT....',plan.event_states])
         return Response(['RESPONSE: ',response])
 
 
